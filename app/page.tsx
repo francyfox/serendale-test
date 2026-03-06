@@ -1,4 +1,5 @@
 import { siteData } from '@/stores/useMainStore'
+import { AppMotionSection } from '@components/motion/AppMotionSection'
 import { AppSectionBenefits } from '@sections/AppSectionBenefits'
 import { AppSectionFooter } from '@sections/AppSectionFooter'
 import { AppSectionHeader } from '@sections/AppSectionHeader'
@@ -11,10 +12,18 @@ export default function Home() {
   return (
     <Fragment>
       <AppSectionHeader {...{ name, navbar, socials }} />
-      <AppSectionHero />
-      <AppSectionBenefits data={ benefits } />
-      <AppSectionReviews data={ reviews } />
-      <AppSectionFooter data={ footer } />
+      <AppMotionSection variant="fadeDown" duration={0.8}>
+        <AppSectionHero />
+      </AppMotionSection>
+      <AppMotionSection variant="fadeLeft" delay={0.1}>
+        <AppSectionBenefits data={benefits} />
+      </AppMotionSection>
+      <AppMotionSection variant="fadeRight" delay={0.1}>
+        <AppSectionReviews data={reviews} />
+      </AppMotionSection>
+      <AppMotionSection variant="scaleUp" delay={0.1}>
+        <AppSectionFooter data={footer} />
+      </AppMotionSection>
     </Fragment>
   );
 }

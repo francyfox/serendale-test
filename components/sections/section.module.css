@@ -1,6 +1,20 @@
+.gradientText {
+    background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 25%, #5C24FF 50%, #D94FD5 75%, #FF3BFF 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 4s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
 .sectionHero {
     &::after {
-        bottom: 45px;
+        bottom: 0;
         position: absolute;
         content: "";
         display: block;

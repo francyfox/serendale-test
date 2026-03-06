@@ -9,7 +9,7 @@ interface Props {
 
 export function AppFooterColumns({ columns, className }: Props) {
   return (
-    <div className={cn(className, "w-full max-w-[600px] flex justify-between gap-5")}>
+    <div className={cn(className, "w-full max-w-[600px] hidden md:flex justify-between gap-5")}>
       { columns.map((column, columnIndex) => (
         <div
           key={columnIndex}

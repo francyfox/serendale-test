@@ -8,7 +8,7 @@ interface Props {
 
 export function AppNavbar({ className, navbar }: Props) {
   return (
-    <nav className={cn(className, "relative top-[2px] flex flex-col 2xl:flex-row flex-wrap items-center gap-[40px]")}>
+    <nav className={cn(className, "relative top-[2px] flex flex-col 2xl:flex-row flex-wrap items-center gap-5 md:gap-[40px]")}>
       {
         navbar.map(i => (
           <Link

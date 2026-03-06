@@ -15,7 +15,7 @@ export function AppFooterContacts({ className, contacts }: Props) {
       <li className="flex gap-2">
         <Icon
           path={mdiMapMarker}
-          className="size-4"
+          className="size-4 shrink-0"
         />
 
         { contacts.address }
@@ -27,7 +27,7 @@ export function AppFooterContacts({ className, contacts }: Props) {
         >
           <Icon
             path={mdiEmail}
-            className="size-4"
+            className="size-4 shrink-0"
           />
 
           { contacts.email }
@@ -40,7 +40,7 @@ export function AppFooterContacts({ className, contacts }: Props) {
         >
           <Icon
             path={mdiPhone}
-            className="size-4"
+            className="size-4 shrink-0"
           />
           { contacts.phone }
         </a>

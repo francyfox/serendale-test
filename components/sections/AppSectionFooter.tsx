@@ -11,17 +11,17 @@ interface Props {
 
 export function AppSectionFooter({ data, className } : Props) {
   return (
-    <footer className={cn(className, "section-footer mt-10 pt-20 bg-card border")}>
+    <footer className={cn(className, "section-footer mt-10 pt-10 md:pt-20 bg-card border")}>
       <AppMarker id="footer" />
 
       <div className="container">
         <div className="flex flex-col gap-10">
-          <div className="mb-10 flex gap-5 justify-between">
+          <div className="mb-2 md:mb-10 flex gap-5 justify-center md:justify-between">
             <AppFooterContacts contacts={data.contacts} />
-            <AppFooterColumns columns={data.columns} />
+            <AppFooterColumns columns={data.columns}    />
           </div>
 
-          <div className="mb-5 text-md text-muted-foreground text-center">
+          <div className="mb-5 text-xs text-muted-foreground text-center">
             { data.copyright }
           </div>
         </div>

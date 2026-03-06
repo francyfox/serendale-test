@@ -9,6 +9,7 @@
   --font-space: var(--font-space-grotesk), sans-serif;
   --font-clash: var(--font-clash-grotesk), sans-serif;
 
+
   --width-container: 1336px;
   --breakpoint-2xl: 1336px;
 }
@@ -30,6 +31,12 @@
 
 body {
   @apply bg-black text-white font-montserrat;
+}
+
+@layer utilities {
+  .font-clash {
+    font-family: var(--font-clash-grotesk), sans-serif;
+  }
 }
 
 @theme inline {

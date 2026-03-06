@@ -14,7 +14,7 @@ interface Props {
 export default function AppSectionHero({ className }: Props) {
   return (
     <main
-      className={cn(className, styles['sectionHero'], "section-hero mt-[166px] relative min-h-[826px] overflow-hidden")}
+      className={cn(className, styles['sectionHero'], "section-hero mt-5 xl:mt-[166px] relative min-h-[400px] md:min-h-[600px] xl:min-h-[826px] overflow-hidden")}
     >
       <Image
         src={bgImage}
@@ -25,7 +25,7 @@ export default function AppSectionHero({ className }: Props) {
         height={619}
         style={{
           position: 'absolute',
-          top: '114px',
+          bottom: '0',
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: -1,
@@ -34,17 +34,17 @@ export default function AppSectionHero({ className }: Props) {
 
       <div className="container">
         <div className="flex flex-col items-center">
-          <h1 className="text-transparent text-7xl font-medium font-montserrat tracking-wider
-          bg-[linear-gradient(90deg,_#FF3BFF_0%,_#ECBFBF_38%,_#5C24FF_76%,_#D94FD5_100%)]
-               bg-clip-text text-center
-          ">
+          <h1 className={cn(
+            styles['gradientText'],
+            "text-2xl md:text-5xl xl:text-7xl font-medium font-montserrat tracking-wider text-center"
+          )}>
             THE BEST WEBSITE EVER
           </h1>
-          <h2 className="text-white text-7xl font-medium font-montserrat tracking-wider text-center">Scalable.</h2>
+          <h2 className="text-white text-xl md:text-3xl xl:text-7xl font-medium font-montserrat tracking-wider text-center">Scalable.</h2>
 
-          <div className="w-full max-w-[723px] mt-[6px] text-center justify-start text-white text-xl font-normal font-montserrat leading-8 tracking-wide">Our technology performing fast blockchain (120K TPS) and it has guaranteed AI-based data security. Proof of Stake, its consensus algorithm enables unlimited speeds.</div>
+          <div className="w-full max-w-[723px] mt-[6px] text-center justify-start text-white text-md xl:text-xl font-normal font-montserrat leading-8 tracking-wide">Our technology performing fast blockchain (120K TPS) and it has guaranteed AI-based data security. Proof of Stake, its consensus algorithm enables unlimited speeds.</div>
 
-          <div className="mt-[32px] flex flex-wrap gap-[12px]">
+          <div className="z-10 mt-[32px] flex justify-center flex-wrap gap-[12px]">
             <AppButton
               href="#getStarted"
               variant="primary"

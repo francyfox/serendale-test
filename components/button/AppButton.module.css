@@ -1,0 +1,18 @@
+.primary {
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 25%, #5C24FF 50%, #D94FD5 75%, #FF3BFF 100%) border-box;
+    background-size: auto, 200% auto;
+    border: 2px solid transparent;
+    animation: borderFlow 4s linear infinite;
+}
+
+@keyframes borderFlow {
+    0%   { background-position: 0 0, 0% center; }
+    100% { background-position: 0 0, 200% center; }
+}
+
+.secondary {
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(#fff, #fff) border-box;
+    border: 2px solid transparent;
+}

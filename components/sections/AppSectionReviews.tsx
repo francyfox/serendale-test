@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardTitle } from '@components/ui/ca
 import {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -22,11 +23,11 @@ interface Props {
 
 export function AppSectionReviews({ data, className }: Props) {
   return (
-    <section className={cn(className, "section-reviews py-20" )}>
+    <section className={cn(className, "section-reviews py-10 md:py-20" )}>
       <AppMarker id="reviews" />
 
       <div className="container">
-        <div className="mb-15 text-white text-7xl font-medium font-montserrat tracking-wider text-right">
+        <div className="mb-15 text-white text-3xl md:text-7xl font-medium font-montserrat tracking-wider text-right">
           Reviews
         </div>
         <Carousel
@@ -44,7 +45,7 @@ export function AppSectionReviews({ data, className }: Props) {
           <CarouselContent>
             {
               data.map((i: Review, index) => (
-                <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
                   <Card>
                     <CardTitle>
                       <div className="px-3 flex flex-col items-center gap-3">
@@ -70,8 +71,9 @@ export function AppSectionReviews({ data, className }: Props) {
               ))
             }
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="max-[840px]:hidden" />
+          <CarouselNext className="max-[840px]:hidden" />
+          <CarouselDots />
         </Carousel>
       </div>
     </section>

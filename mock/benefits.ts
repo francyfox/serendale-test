@@ -39,5 +39,5 @@ export const benefits: Benefit[] = titles.map((title, i) => ({
   id: faker.string.uuid(),
   icon: icons[i],
   title,
-  description: faker.lorem.sentence({ min: 3, max: 6 }),
+  description: faker.lorem.sentence({ min: 6, max: 6 }),
 }));

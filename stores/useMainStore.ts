@@ -33,5 +33,6 @@ export const siteData: MainState = {
   footer: footerData,
 }
 
-// для клиентских компонентов с интерактивностью (меню, модалки и т.д.)
+// P.S. ну или передаем внутрь секций, тогда сохраняем SSG, но я все равно уже использую next-image (идиотизм пакет не умеет в prerender),
 export const useMainStore = create<MainState>(() => siteData)
+// zustand есть? есть!

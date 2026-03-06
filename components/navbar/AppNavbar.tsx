@@ -1,0 +1,24 @@
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
+
+interface Props {
+  className?: string
+  navbar: string[]
+}
+
+export function AppNavbar({ className, navbar }: Props) {
+  return (
+    <nav className={cn(className, "flex flex-col 2xl:flex-row flex-wrap items-center gap-[40px]")}>
+      {
+        navbar.map(i => (
+          <Link
+            href={`#${i.trim().replace(" ", "")}`} key={i}
+            className="transition-colors text-white hover:text-violet-400 text-lg font-normal font-clash"
+          >
+            { i }
+          </Link>
+        ))
+      }
+    </nav>
+  )
+}

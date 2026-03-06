@@ -11,14 +11,15 @@ import {
 } from "@/components/ui/drawer"
 import { Button } from "@/components/ui/button"
 import Icon from '@mdi/react'
-import { mdiMenu } from '@mdi/js'
+import { mdiMenu, mdiClose } from '@mdi/js'
 interface Props {
   className?: string,
+  children?: React.ReactNode
 }
-export function AppBurgerButton({ className }: Props) {
+export function AppBurgerButton({ className, children }: Props) {
   return (
     <Drawer direction="right">
-      <DrawerTrigger>
+      <DrawerTrigger asChild>
         <Button variant="outline">
           <Icon path={mdiMenu}
                 className="size-6"
@@ -27,15 +28,23 @@ export function AppBurgerButton({ className }: Props) {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+          <DrawerTitle className="sr-only">Navigation menu</DrawerTitle>
+          <div className="flex justify-end">
+            <DrawerClose asChild>
+              <Button variant="outline">
+                <Icon
+                  path={mdiClose}
+                  aria-label="Close"
+                  className="size-6"
+                />
+              </Button>
+            </DrawerClose>
+          </div>
         </DrawerHeader>
-        <DrawerFooter>
-          <Button>Submit</Button>
-          <DrawerClose>
-            <Button variant="outline">Cancel</Button>
-          </DrawerClose>
-        </DrawerFooter>
+
+        <div className="px-2">
+          { children }
+        </div>
       </DrawerContent>
     </Drawer>
   )

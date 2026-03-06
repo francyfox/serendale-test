@@ -1,3 +1,3 @@
 export const breakpoints = {
-  xl: 1336
+  xxl: 1336
 }

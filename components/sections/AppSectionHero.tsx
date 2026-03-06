@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import bgImage from '@/assets/images/hero-bg.png'
 import { AppButton } from '@components/button/AppButton'
 import Image from 'next/image'
+import styles from './section.module.css'
 
 interface Props {
   className?: string;
@@ -13,7 +14,7 @@ interface Props {
 export default function AppSectionHero({ className }: Props) {
   return (
     <main
-      className={cn(className, "section-hero mt-[166px] relative min-h-[826px] overflow-hidden")}
+      className={cn(className, styles['sectionHero'], "section-hero mt-[166px] relative min-h-[826px] overflow-hidden")}
     >
       <Image
         src={bgImage}

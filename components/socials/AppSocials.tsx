@@ -9,7 +9,7 @@ interface Props {
 
 export function AppSocials({ className, socials }: Props) {
   return (
-    <ul className={cn(className, "flex flex-wrap gap-5")}>
+    <ul className={cn(className, "relative top-[2px] flex flex-wrap gap-5")}>
       {
         socials.map(i => (
           <li key={i.name} className="flex">

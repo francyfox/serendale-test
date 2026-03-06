@@ -1,4 +1,4 @@
-import { siteData } from '@/app/stores/useMainStore'
+import { siteData } from '@/stores/useMainStore'
 import AppSectionHero from '@sections/AppSectionHero'
 
 export default function Home() {

@@ -20,8 +20,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@components/*": ["./app/components/*"],
-      "@sections/*": ["./app/components/sections/*"]
+      "@components/*": ["./components/*"],
+      "@sections/*": ["./components/sections/*"],
+      "@stores/*": ["./stores/*"],
+      "@mock/*": ["./mock/*"]
     }
   },
   "include": [

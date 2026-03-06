@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Icon from '@mdi/react';
+import { useWindowSize } from "@uidotdev/usehooks";
 
 interface Props {
   name: string
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function AppSectionHero({ name, navbar, socials }: Props) {
+  const { width } = useWindowSize();
+
   return (
     <header className="section-header py-[48px]">
       <div className="container">

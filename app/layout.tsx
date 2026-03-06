@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const clashGrotesk = localFont({
-  src: "./assets/fonts/ClashGrotesk/Fonts/ClashGrotesk-Variable.woff2",
+  src: "../assets/fonts/ClashGrotesk/Fonts/ClashGrotesk-Variable.woff2",
   variable: "--font-clash-grotesk",
   display: "swap",
 });

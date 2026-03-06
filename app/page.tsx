@@ -9,8 +9,33 @@ import { Fragment } from 'react'
 
 export default function Home() {
   const { name, navbar, socials, benefits, reviews, footer } = siteData
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1),
+      reviewCount: reviews.length,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    review: reviews.map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author, jobTitle: r.role },
+      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+      reviewBody: r.text,
+      datePublished: r.date,
+    })),
+  }
+
   return (
     <Fragment>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <AppSectionHeader {...{ name, navbar, socials }} />
       <AppMotionSection variant="fadeDown" duration={0.8}>
         <AppSectionHero />
@@ -25,5 +50,5 @@ export default function Home() {
         <AppSectionFooter data={footer} />
       </AppMotionSection>
     </Fragment>
-  );
+  )
 }

@@ -22,6 +22,7 @@ export default function AppSectionHero({ className }: Props) {
         placeholder="blur"
         quality={90}
         sizes="(max-width: 768px) 100vw, 1605px"
+        fetchPriority="high"
         style={{
           position: 'absolute',
           bottom: '0',

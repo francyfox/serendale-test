@@ -1,12 +1,11 @@
 import { siteData } from '@/stores/useMainStore'
 import { AppSectionHeader } from '@sections/AppSectionHeader'
+import { AppSectionBenefits } from '@sections/AppSectionBenefits'
 import AppSectionHero from '@sections/AppSectionHero'
 import { AppMotionSection } from '@components/motion/AppMotionSection'
 import { Fragment } from 'react'
 
 import dynamic from 'next/dynamic'
-
-const AppSectionBenefits = dynamic(() => import('@sections/AppSectionBenefits').then(m => m.AppSectionBenefits))
 const AppSectionReviews = dynamic(() => import('@sections/AppSectionReviews').then(m => m.AppSectionReviews))
 const AppSectionFooter = dynamic(() => import('@sections/AppSectionFooter').then(m => m.AppSectionFooter))
 

@@ -56,6 +56,7 @@ export function AppSectionReviews({ data, className }: Props) {
                           height={80}
                           quality={90}
                           loading="lazy"
+                          fetchPriority="low"
                           className="rounded-full"
                         />
                         { i.author }

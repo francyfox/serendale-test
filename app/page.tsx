@@ -1,11 +1,14 @@
 import { siteData } from '@/stores/useMainStore'
-import { AppMotionSection } from '@components/motion/AppMotionSection'
-import { AppSectionBenefits } from '@sections/AppSectionBenefits'
-import { AppSectionFooter } from '@sections/AppSectionFooter'
 import { AppSectionHeader } from '@sections/AppSectionHeader'
 import AppSectionHero from '@sections/AppSectionHero'
-import { AppSectionReviews } from '@sections/AppSectionReviews'
+import { AppMotionSection } from '@components/motion/AppMotionSection'
 import { Fragment } from 'react'
+
+import dynamic from 'next/dynamic'
+
+const AppSectionBenefits = dynamic(() => import('@sections/AppSectionBenefits').then(m => m.AppSectionBenefits))
+const AppSectionReviews = dynamic(() => import('@sections/AppSectionReviews').then(m => m.AppSectionReviews))
+const AppSectionFooter = dynamic(() => import('@sections/AppSectionFooter').then(m => m.AppSectionFooter))
 
 export default function Home() {
   const { name, navbar, socials, benefits, reviews, footer } = siteData

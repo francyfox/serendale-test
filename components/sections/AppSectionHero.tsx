@@ -20,9 +20,8 @@ export default function AppSectionHero({ className }: Props) {
         src={bgImage}
         alt="Background"
         placeholder="blur"
-        quality={100}
-        width={1605}
-        height={619}
+        quality={90}
+        sizes="(max-width: 768px) 100vw, 1605px"
         style={{
           position: 'absolute',
           bottom: '0',

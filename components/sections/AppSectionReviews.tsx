@@ -54,7 +54,8 @@ export function AppSectionReviews({ data, className }: Props) {
                           alt="avatar"
                           width={80}
                           height={80}
-                          quality={100}
+                          quality={90}
+                          loading="lazy"
                           className="rounded-full"
                         />
                         { i.author }

@@ -21,8 +21,8 @@ export default function AppSectionHero({ className }: Props) {
         alt="Background"
         placeholder="blur"
         quality={90}
-        sizes="(max-width: 768px) 100vw, 1605px"
-        fetchPriority="high"
+        sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1605px"
+        priority
         style={{
           position: 'absolute',
           bottom: '0',

@@ -20,7 +20,7 @@ export function AppBurgerButton({ className, children }: Props) {
   return (
     <Drawer direction="right">
       <DrawerTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" aria-label="menu">
           <Icon path={mdiMenu}
                 className="size-6"
           />
